@@ -4,8 +4,8 @@ import org.junit.Assert;
 public class TestMaximumTest {
 	@Test
 	public void givenFirst_Greater_ShouldReturnFirstInteger() {
-		TestMaximum test = new TestMaximum();
-		Integer result = test.maximumOfThree(100, 90, 80);
+		TestMaximum test = new TestMaximum<Integer>(100,90,80);
+		Integer result = (Integer) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result == 100) {
 		finalResult = true;
@@ -14,8 +14,8 @@ public class TestMaximumTest {
 	}
 	@Test
 	public void givenSecond_Greater_ShouldReturnSecondInteger() {
-		TestMaximum test = new TestMaximum();
-		Integer result = test.maximumOfThree(90, 100, 80);
+		TestMaximum test = new TestMaximum<Integer>(90,100,80);
+		Integer result = (Integer) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result == 100) {
 		finalResult = true;
@@ -24,8 +24,8 @@ public class TestMaximumTest {
 	}
 	@Test
 	public void givenThird_Greater_ShouldReturnThirdInteger() {
-		TestMaximum test = new TestMaximum();
-		Integer result = test.maximumOfThree(90, 80, 100);
+		TestMaximum test = new TestMaximum<Integer>(80,90,100);
+		Integer result = (Integer) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result == 100) {
 		finalResult = true;
@@ -34,8 +34,8 @@ public class TestMaximumTest {
 	}
 	@Test
 	public void givenFirst_Greater_ShouldReturnFirstFloat() {
-		TestMaximum test = new TestMaximum();
-		Float result = test.maximumOfThree(100f, 90f, 80f);
+		TestMaximum test = new TestMaximum<Float>(100f,90f,80f);
+		Float result = (Float) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result == 100f) {
 		finalResult = true;
@@ -44,8 +44,8 @@ public class TestMaximumTest {
 	}
 	@Test
 	public void givenSecond_Greater_ShouldReturnSecondFloat() {
-		TestMaximum test = new TestMaximum();
-		Float result = test.maximumOfThree(90f, 100f, 80f);
+		TestMaximum test = new TestMaximum<Float>(90f,100f,80f);
+		Float result = (Float) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result == 100f) {
 		finalResult = true;
@@ -54,8 +54,8 @@ public class TestMaximumTest {
 	}
 	@Test
 	public void givenThird_Greater_ShouldReturnThirdFloat() {
-		TestMaximum test = new TestMaximum();
-		Float result = test.maximumOfThree(90f, 80f, 100f);
+		TestMaximum test = new TestMaximum<Float>(80f,90f,100f);
+		Float result = (Float) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result == 100f) {
 		finalResult = true;
@@ -64,8 +64,8 @@ public class TestMaximumTest {
 	}
 	@Test
 	public void givenFirst_Greater_ShouldReturnFirstString() {
-		TestMaximum test = new TestMaximum();
-		String result = test.maximumOfThree("peach", "banana", "apple");
+		TestMaximum test = new TestMaximum<String>("peach", "banana", "apple");
+		String result = (String) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result.equalsIgnoreCase("peach")) {
 		finalResult = true;
@@ -74,8 +74,8 @@ public class TestMaximumTest {
 	}
 	@Test
 	public void givenSecond_Greater_ShouldReturnSecondString() {
-		TestMaximum test = new TestMaximum();
-		String result = test.maximumOfThree("banana", "peach", "apple");
+		TestMaximum test = new TestMaximum<String>("banana", "peach", "apple");
+		String result = (String) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result.equalsIgnoreCase("peach")) {
 		finalResult = true;
@@ -84,8 +84,8 @@ public class TestMaximumTest {
 	}
 	@Test
 	public void givenThird_Greater_ShouldReturnThirdString() {
-		TestMaximum test = new TestMaximum();
-		String result = test.maximumOfThree("banana", "apple", "peach");
+		TestMaximum test = new TestMaximum<String>("banana", "apple", "peach");
+		String result = (String) test.maximumOfThree();
 		boolean finalResult=false; 
 		if(result.equalsIgnoreCase("peach")) {
 		finalResult = true;
